@@ -22,10 +22,6 @@ public class assignment2 {
 		SimpleDateFormat ft =
 		new SimpleDateFormat ("EEEEEEEE MMMMMMM dd, yyyy h:m:s a z");
 		
-		//initialize int for use of an int
-		@SuppressWarnings("unused") //remove warning that int a is unused 
-		int a = 0;
-		
 			//help from http://stackoverflow.com/questions/10924561/java-scanner-string-input-if-statement-not-working
 			String password; //make string called password
 			System.out.println("Program start\nRunning " +ft.format(dNow)); //print line with date/time in console
@@ -33,8 +29,15 @@ public class assignment2 {
 			password = input.nextLine(); //take input for String: password with Scanner: input
 			
 			if(password.equalsIgnoreCase("doit")) { //continues to time sheet calculator if "doit" is inputed
-				System.out.println("Starting Time Sheet Calculator"); //print line in console
+				System.out.println("Welcome"); //print line in console
 				
+				String name = JOptionPane.showInputDialog("What's your name?"); //creates JOptionPane with text field for your name
+				JOptionPane.showMessageDialog(null, "Hello " + name); //says hello ______ 
+				
+				int a = JOptionPane.showConfirmDialog(null, "Do you have a job?", //creates JOptionPane with Yes/No buttons
+						 "Do you have a job?", JOptionPane.YES_NO_OPTION);
+				
+				if(a == JOptionPane.YES_OPTION){
 				String base_pay =
 						JOptionPane.showInputDialog("Regular Pay (per hour):"); //creates JOptionPane with text field for your base pay
 				String hours_worked =
@@ -68,14 +71,21 @@ public class assignment2 {
 				System.out.println("You made $" + pay); //printing line that tells user pay for designated hours worked 
 				
 		}
+				else{
+					int ag;
+					do {
+						String age = JOptionPane.showInputDialog("How old are you?");
+						ag = Integer.parseInt(age); //makes String an int for age
+					} while (ag > 100);
+						
+				}
+			}
 		else if (password != "doit"){ //runs if user input is anything but "doit"
 				System.out.println("Wrong."); //print line that says "Wrong."
-				input.close(); //closes scanner
-				System.exit(0); //quits program
 		}
 	
 		input.close(); //closes scanner
 
-	}
 
+			}
 }
