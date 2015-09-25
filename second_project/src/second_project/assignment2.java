@@ -73,19 +73,32 @@ public class assignment2 {
 		}
 				else{
 					int ag;
-					do {
+					do { //help from https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
 						String age = JOptionPane.showInputDialog("How old are you?");
 						ag = Integer.parseInt(age); //makes String an int for age
-					} while (ag > 100);
+					} while (ag > 100); //does not allow ages over 100 years old 
+					
+					String title; //create string called title
+					switch (ag) {
+		            case 10:  title = "Double Digit Midgit eh?";
+		                     break;
+		            case 21:  title = "Vegas anyone?";
+		                     break;
+		            case 50:  title = "Oh my.";
+		                     break;
+		            default: title = "You're just like that other guy that just passed through here";
+		            		 break;
+					}
+		            System.out.println(title);
 						
 				}
-			}
+				}
 		else if (password != "doit"){ //runs if user input is anything but "doit"
 				System.out.println("Wrong."); //print line that says "Wrong."
 		}
 	
 		input.close(); //closes scanner
 
-
 			}
-}
+	}
+			
