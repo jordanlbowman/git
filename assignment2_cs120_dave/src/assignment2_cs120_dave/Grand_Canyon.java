@@ -1,12 +1,13 @@
 package assignment2_cs120_dave;
 
-public class USC extends Colleges {
-	private int s = 43000;
-	private int c = 60000;
-	private int f = 3249;
+public class Grand_Canyon extends Colleges {
 	
-	public USC() {
-		super("Cardinal");
+	private int s = 14500;
+	private int c = 32000;
+	private int f = 3620;
+	
+	public Grand_Canyon() {
+		super("Purple");
 		// TODO Auto-generated constructor stub
 	}
 	

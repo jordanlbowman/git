@@ -1,12 +1,13 @@
 package assignment2_cs120_dave;
 
-public class USC extends Colleges {
-	private int s = 43000;
-	private int c = 60000;
-	private int f = 3249;
+public class Hawaii extends Colleges {
 	
-	public USC() {
-		super("Cardinal");
+	private int s = 20000;
+	private int c = 16000;
+	private int f = 1306;
+	
+	public Hawaii() {
+		super("Green");
 		// TODO Auto-generated constructor stub
 	}
 	
