@@ -20,26 +20,28 @@ public class Main {
 				colleges[1] = new Colleges("Public");
 				colleges[2] = new Colleges("For Profit");
 				
-		Object[] your_colleges = new Object [4];
-		your_colleges[0] = new Carroll_College();
-		your_colleges[1] = new USC();
-		your_colleges[2] = new Hawaii();
-		your_colleges[3] = new Grand_Canyon();
-		
-		String[] your_college = new String [4];
-		your_college[0] = "Carroll_College";
-		your_college[1] = "USC";
-		your_college[2] = "Hawaii";
-		your_college[3] = "Grand_Canyon";
+		Object[] your_colleges = new Object [2];
+		your_colleges[0] = new USC();
+		your_colleges[1] = new Hawaii();
 				 
-		String yours = (String) JOptionPane.showInputDialog(null, "What do you want:",
-						 "Pick one", JOptionPane.QUESTION_MESSAGE, null, your_college, your_college[0]); 
-		
-		System.out.println(yours.getClass());
-		//yours.getS();
-		//yours.getC();
-		//yours.getF();
-		
+		String moneys = JOptionPane.showInputDialog(null, "How much money do you have?");
+		String money = JOptionPane.showInputDialog(null, "How much money do you have for Hawaii?");
+
+		try{
+			((USC) your_colleges[0]).setC(Integer.parseInt(moneys));
+		}
+		catch(NumberFormatException e){
+			System.out.println("That's not an integer");
+			System.exit(0);
+		}
+		try{
+			((Hawaii) your_colleges[1]).setC(Integer.parseInt(money));
+		}
+		catch(NumberFormatException e){
+			System.out.println("That's not an integer for Hawaii money");
+			System.exit(0);
+		}
+
 	}
 
 }

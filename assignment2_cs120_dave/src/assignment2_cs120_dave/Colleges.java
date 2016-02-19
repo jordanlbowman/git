@@ -4,7 +4,6 @@ public class Colleges {
 	private int students = 0;
 	private int cost = 0;
 	private int faculty = 0;
-	public static String choice;
 	
 	public Colleges(String string) {
 		// TODO Auto-generated constructor stub
