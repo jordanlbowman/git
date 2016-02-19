@@ -29,7 +29,7 @@ public class USC extends Colleges {
 	public int getF() {
 		return f;
 	}
-
+@Override
 	public void setF(int f) {
 		this.f = f;
 	}

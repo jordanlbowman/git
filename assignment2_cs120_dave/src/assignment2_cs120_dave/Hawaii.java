@@ -30,7 +30,7 @@ public class Hawaii extends Colleges {
 	public int getF() {
 		return f;
 	}
-
+@Override
 	public void setF(int f) {
 		this.f = f;
 	}

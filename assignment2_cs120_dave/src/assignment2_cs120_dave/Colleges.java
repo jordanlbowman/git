@@ -34,4 +34,9 @@ public class Colleges {
 		this.faculty = faculty;
 	}
 
+	public void setF(int f) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
