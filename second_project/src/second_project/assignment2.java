@@ -20,7 +20,7 @@ public class assignment2 {
 		//adapted from http://www.tutorialpoints.com/java/java_date_time.htm
 		Date dNow = new Date( );
 		SimpleDateFormat ft =
-		new SimpleDateFormat ("EEEEEEEE MMMMMMM dd, yyyy h:m:s a z");
+		new SimpleDateFormat ("EEEEEEEE MMMMMMM dd, yyyy hh:mm:sss a z");
 		
 			//help from http://stackoverflow.com/questions/10924561/java-scanner-string-input-if-statement-not-working
 			String password; //make string called password
@@ -79,17 +79,20 @@ public class assignment2 {
 					} while (ag > 100); //does not allow ages over 100 years old 
 					
 					String title; //create string called title
+					//help from https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html
 					switch (ag) {
 		            case 10:  title = "Double Digit Midgit eh?";
 		                     break;
+		            case 18: title = "You aren't a real adult until you have a Costco card.";
+		            		 break;
 		            case 21:  title = "Vegas anyone?";
 		                     break;
 		            case 50:  title = "Oh my.";
 		                     break;
-		            default: title = "You're just like that other guy that just passed through here";
+		            default: title = "You're just like that other guy that just passed through here.";
 		            		 break;
 					}
-		            System.out.println(title);
+					JOptionPane.showMessageDialog(null, title); //opens a JOptionPane with some saucy output for your age 
 						
 				}
 				}
